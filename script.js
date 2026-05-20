@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /*  IDIOMA  */
+    /*IDIOMA */
     const langBtns   = [document.getElementById('lang-switch'), document.getElementById('lang-switch-overlay')];
     const langTexts  = document.querySelectorAll('.lang-text');
     const welcomeBox = document.getElementById('welcome-message');
