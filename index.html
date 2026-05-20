@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kintsugi - Christian Pinto</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<div id="welcome-overlay" class="welcome-overlay">
+    <div class="welcome-content" role="dialog" aria-labelledby="welcome-message">
+        <div class="welcome-lang-container">
+            <button id="lang-switch-overlay" class="lang-mini-btn" aria-label="Cambiar idioma">ES / EN</button>
+        </div>
+        <h2 id="welcome-message"></h2>
+        <button id="close-welcome" class="btn lang-text" data-es="Explorar Kintsugi" data-en="Explore Kintsugi">Explorar Kintsugi</button>
+    </div>
+</div>
+
+  <header role="banner">
+    <nav aria-label="Navegación principal">
+      <div class="logo-container">
+        <span class="kanji-logo" aria-hidden="true">金継ぎ</span>
+        <div class="logo">KINTSUGI</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio" class="lang-text" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="#proceso" class="lang-text" data-es="Proceso" data-en="Process">Proceso</a></li>
+        <li><a href="#galeria" class="lang-text" data-es="Galería" data-en="Gallery">Galería</a></li>
+        <li><button id="lang-switch" class="lang-toggle-btn" aria-label="Cambiar idioma" aria-pressed="false">ES / EN</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" role="main">
+    <div id="welcome-message" class="welcome-banner"></div>
+    
+    <!-- INICIO -->
+    <section id="inicio" class="full-page hero" aria-labelledby="inicio-h1">
+      <div class="bg-kanji" aria-hidden="true">金継ぎ</div>
+      <div class="hero-slider" aria-label="Galería de imágenes principal" role="region">
+        <div class="slider-track" id="sliderTrack">
+
+          <figure class="slide" aria-hidden="false">
+            <img src="img/Hero.jpg"
+                 alt="Primer plano de un cuenco cerámico antiguo restaurado con finas venas de oro"
+                 class="main-hero-img"
+                 width="1600" height="1067"
+                 decoding="async" fetchpriority="high">
+            <figcaption class="visible-caption lang-text"
+              data-es="Primer plano de un cuenco cerámico antiguo restaurado con finas venas de oro que parten del centro hacia los bordes"
+              data-en="Close-up of an antique ceramic bowl restored with fine gold veins spreading from the center to the edges">
+              Primer plano de un cuenco cerámico antiguo restaurado con finas venas de oro que parten del centro hacia los bordes
+            </figcaption>
+          </figure>
+
+          <figure class="slide" aria-hidden="true">
+            <img src="img/Hero2.jpg"
+                 alt="Mano escultórica agrietada reparada con líneas doradas al estilo Kintsugi"
+                 class="main-hero-img"
+                 width="800" height="600"
+                 decoding="async" loading="lazy">
+            <figcaption class="visible-caption lang-text"
+              data-es="Proceso de restauración de piezas de cerámica mediante una técnica decorativa con acabados dorados sobre una mesa de trabajo.s"
+              data-en="Ceramic pieces being restored using a decorative technique with golden finishes on">
+              Proceso de restauración de piezas de cerámica mediante una técnica decorativa con acabados dorados sobre una mesa de trabajo.
+            </figcaption>
+          </figure>
+
+          <figure class="slide" aria-hidden="true">
+            <img src="img/Hero3.jpg"
+                 alt="Tazón de cerámica reparado"
+                 class="main-hero-img"
+                 width="800" height="600"
+                 decoding="async" loading="lazy">
+            <figcaption class="visible-caption lang-text"
+              data-es="Un tazón de cerámica reparado con líneas doradas descansa sobre una superficie brillante junto a hojas verdes y un fondo rosado."
+              data-en="A ceramic bowl repaired with golden lines rests on a shiny surface beside green leaves and a pink background">
+              Un tazón de cerámica reparado con líneas doradas descansa sobre una superficie brillante junto a hojas verdes y un fondo rosado.
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Imagen anterior">&#8592;</button>
+        <button class="slider-btn slider-next" id="sliderNext" aria-label="Imagen siguiente">&#8594;</button>
+
+        <div class="slider-dots" role="tablist" aria-label="Seleccionar imagen">
+          <button class="dot active" role="tab" aria-selected="true"  aria-label="Imagen 1" data-index="0"></button>
+          <button class="dot"        role="tab" aria-selected="false" aria-label="Imagen 2" data-index="1"></button>
+          <button class="dot"        role="tab" aria-selected="false" aria-label="Imagen 3" data-index="2"></button>
+        </div>
+      </div>
+      <h1 id="inicio-h1" class="lang-text" data-es="Kintsugi: Reparar con Oro" data-en="Kintsugi: Repairing with Gold" >Kintsugi: Reparar con Oro</h1>
+      <p class="intro-text lang-text"
+         data-es="El Kintsugi es el arte japonés de reparar cerámica rota utilizando oro, resaltando la belleza de las imperfecciones."
+         data-en="Kintsugi is the Japanese art of repairing broken pottery with gold, highlighting the beauty of imperfections.">
+        El Kintsugi es el arte japonés de reparar cerámica rota utilizando oro, resaltando la belleza de las imperfecciones.
+      </p>
+      <div class="hero-buttons">
+        <a href="#proceso" class="btn lang-text" data-es="Aprender más" data-en="Learn more">Aprender más</a>
+        <a href="#galeria" class="btn lang-text" data-es="Ver Galería" data-en="View Gallery">Ver Galería</a>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso" class="full-page process-section" aria-labelledby="proceso-h2">
+      <div class="bg-kanji kanji-left" aria-hidden="true">金継ぎ</div>
+      <div class="bg-kanji kanji-right" aria-hidden="true">金継ぎ</div>
+      <h2 id="proceso-h2" class="section-title lang-text" data-es="El Proceso del Kintsugi" data-en="The Kintsugi Process">El Proceso del Kintsugi</h2>
+      <div class="process-steps">
+        <div class="step-card" role="article">
+          <h3 class="lang-text" data-es="1. La Ruptura" data-en="1. The Breakage">1. La Ruptura</h3>
+          <p class="lang-text"
+            data-es="<strong>Fase de Aceptación:</strong> Se limpian cuidadosamente los fragmentos. No se intenta ocultar el daño, sino entender la historia detrás de la rotura para preparar la reconstrucción."
+            data-en="<strong>Acceptance Phase:</strong> Fragments are carefully cleaned. No attempt is made to hide the damage, but to understand the history behind the break to prepare for reconstruction.">
+            <strong>Fase de Aceptación:</strong> Se limpian cuidadosamente los fragmentos. No se intenta ocultar el daño, sino entender la historia detrás de la rotura para preparar la reconstrucción.
+          </p>
+        </div>
+        <div class="step-card" role="article">
+          <h3 class="lang-text" data-es="2. La Unión" data-en="2. The Joining">2. La Unión</h3>
+          <p class="lang-text"
+            data-es="<strong>Fase de Ensamblaje:</strong> Los fragmentos se unen con resina Urushi. Este proceso requiere precisión y paciencia, permitiendo que la pieza recupere su forma original pero con nuevas líneas de vida."
+            data-en="<strong>Assembly Phase:</strong> Fragments are joined with Urushi resin. This process requires precision and patience, allowing the piece to regain its original shape but with new lifelines.">
+            <strong>Fase de Ensamblaje:</strong> Los fragmentos se unen con resina Urushi. Este proceso requiere precisión y paciencia, permitiendo que la pieza recupere su forma original pero con nuevas líneas de vida.
+          </p>
+        </div>
+        <div class="step-card" role="article">
+          <h3 class="lang-text" data-es="3. Embellecimiento" data-en="3. Embellishment">3. Embellecimiento</h3>
+          <p class="lang-text"
+            data-es="<strong>Fase de Iluminación:</strong> Se aplica polvo de oro sobre la resina aún fresca. El resultado es una pieza más resistente y estéticamente superior a la original."
+            data-en="<strong>Enlightenment Phase:</strong> Gold powder is applied over the wet resin. The result is a piece that is stronger and aesthetically superior to the original.">
+            <strong>Fase de Iluminación:</strong> Se aplica polvo de oro sobre la resina aún fresca. El resultado es una pieza más resistente y estéticamente superior a la original.
+          </p>
+        </div>
+      </div>
+      <div class="multimedia-container">
+        <figure class="process-img">
+          <img src="img/collage.jpg"
+               alt="Mosaico de fotografías que detallan el proceso artesanal"
+               class="collage-img"
+               width="1600"
+               height="900"
+               loading="lazy"
+               decoding="async">
+          <figcaption class="visible-caption-dark lang-text"
+            data-es="Mosaico de fotografías que detallan el proceso artesanal: desde los fragmentos sueltos hasta el pulido final del oro"
+            data-en="Photo mosaic detailing the artisanal process: from loose fragments to the final gold polishing">
+            Mosaico de fotografías que detallan el proceso artesanal: desde los fragmentos sueltos hasta el pulido final del oro
+          </figcaption>
+        </figure>
+        <div class="video-container">
+          <video controls preload="metadata" aria-label="Video educativo del proceso de Kintsugi">
+            <source src="video/proceso.mp4" type="video/mp4">
+          </video>
+          <p class="video-source lang-text"
+            data-es="Fuente: Video educativo sobre el proceso de Kintsugi – University of Oxford (YouTube)."
+            data-en="Source: Educational video on the Kintsugi process – University of Oxford (YouTube).">
+            Fuente: Video educativo sobre el proceso de Kintsugi – University of Oxford (YouTube).
+          </p>
+        </div>
+      </div>
+    </section>
+
+        <!-- GALERÍA -->
+    <section id="galeria" class="full-page gallery-section" aria-labelledby="galeria-h2">
+      <div class="bg-kanji kanji-left" aria-hidden="true">金継ぎ</div>
+      <div class="bg-kanji kanji-right" aria-hidden="true">金継ぎ</div>
+      <h2 id="galeria-h2" class="section-title lang-text" data-es="Galería Educativa" data-en="Educational Gallery">Galería Educativa</h2>
+      <div class="gallery-filters" role="group" aria-label="Filtrar galería">
+        <button class="filter-btn active lang-text" data-filter="all"  data-es="Todos" data-en="All">Todos</button>
+        <button class="filter-btn lang-text" data-filter="escultura"   data-es="Escultura" data-en="Sculpture">Escultura</button>
+        <button class="filter-btn lang-text" data-filter="ceramica"    data-es="Cerámica" data-en="Ceramics">Cerámica</button>
+        <button class="filter-btn lang-text" data-filter="minimalista" data-es="Minimalista" data-en="Minimalist">Minimalista</button>
+      </div>
+
+      <div class="gallery-grid-container">
+        <div class="gallery-images-quad" id="galleryGrid">
+          <figure class="gallery-item" data-category="escultura">
+            <img src="img/gal1.jpg"
+                 alt="Mano escultórica agrietada reparada con líneas doradas"
+                 width="800" height="600" loading="lazy" decoding="async">
+            <figcaption class="img-desc lang-text"
+                data-es="Mano escultórica agrietada reparada con líneas doradas al estilo Kintsugi, simbolizando resiliencia y belleza en las imperfecciones"
+                data-en="Cracked sculptural hand repaired with golden lines in Kintsugi style, symbolizing resilience and beauty in imperfections">
+              Mano escultórica agrietada reparada con líneas doradas al estilo Kintsugi, simbolizando resiliencia y belleza en las imperfecciones
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="ceramica">
+            <img src="img/gal2.jpg"
+                 class="gallery-item__img--centered"
+                 alt="Corazón de cerámica reparado"
+                 width="800" height="600" loading="lazy" decoding="async">
+            <figcaption class="img-desc lang-text"
+                data-es="Corazón de cerámica reparado con la técnica japonesa del Kintsugi, donde las grietas se unen con líneas doradas simbolizando sanación y belleza en lo roto"
+                data-en="Ceramic heart repaired with the Japanese Kintsugi technique, where cracks are joined with golden lines symbolizing healing and beauty in the broken">
+              Corazón de cerámica reparado con la técnica japonesa del Kintsugi, donde las grietas se unen con líneas doradas simbolizando sanación y belleza en lo roto
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="minimalista">
+            <img src="img/gal3.jpg"
+                 alt="Diseño minimalista Kintsugi"
+                 width="800" height="600" loading="lazy" decoding="async">
+            <figcaption class="img-desc lang-text"
+                data-es="Diseño minimalista inspirado en el arte japonés del Kintsugi, con grietas doradas sobre fondo oscuro que simbolizan la belleza de las imperfecciones y la reparación"
+                data-en="Minimalist design inspired by the Japanese art of Kintsugi, with golden cracks on a dark background symbolizing the beauty of imperfections and repair">
+              Diseño minimalista inspirado en el arte japonés del Kintsugi, con grietas doradas sobre fondo oscuro que simbolizan la belleza de las imperfecciones y la reparación
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="ceramica">
+            <img src="img/gal4.jpg"
+                 class="gallery-item__img--centered"
+                 alt="Plato cerámico reconstruido"
+                 width="800" height="600" loading="lazy" decoding="async">
+            <figcaption class="img-desc lang-text"
+                data-es="Plato cerámico reconstruido mostrando la técnica de rellenar espacios faltantes con resina de oro, devolviendo la funcionalidad al objeto"
+                data-en="Reconstructed ceramic plate showing the technique of filling missing gaps with gold resin, restoring functionality to the object">
+              Plato cerámico reconstruido mostrando la técnica de rellenar espacios faltantes con resina de oro, devolviendo la funcionalidad al objeto
+            </figcaption>
+          </figure>
+        </div>
+        <div class="analysis-panel" role="article">
+          <div class="panel-header">
+            <h3 class="lang-text" data-es="Análisis de Obra: Resiliencia y Estética" data-en="Art Analysis: Resilience and Aesthetics">Análisis de Obra: Resiliencia y Estética</h4>
+          </div>
+          <div class="panel-content">
+            <p class="lang-text"
+              data-es="La técnica del Kintsugi trasciende la restauración técnica para convertirse en un manifiesto visual profundo sobre la resiliencia y la historia del objeto. En estas piezas observamos conceptos fundamentales:"
+              data-en="The Kintsugi technique transcends technical restoration to become a profound visual manifesto on resilience and the object's history. In these pieces, we observe fundamental concepts:">
+              La técnica del Kintsugi trasciende la restauración técnica para convertirse en un manifiesto visual profundo sobre la resiliencia y la historia del objeto. En estas piezas observamos conceptos fundamentales:
+            </p>
+            <ul>
+              <li class="lang-text"
+                data-es="<strong>Wabi-sabi:</strong> Es la base filosófica que nos invita a apreciar la belleza en la imperfección y aceptar el ciclo natural de crecimiento y decadencia."
+                data-en="<strong>Wabi-sabi:</strong> It is the philosophical basis that invites us to appreciate beauty in imperfection and accept the natural cycle of growth and decay.">
+                <strong>Wabi-sabi:</strong> Es la base filosófica que nos invita a apreciar la belleza en la imperfección y aceptar el ciclo natural de crecimiento y decadencia.
+              </li>
+              <li class="lang-text" 
+                  data-es="<strong>Cicatrices de Oro:</strong> Las líneas doradas no son simples adornos; representan la fuerza adquirida tras la adversidad. La pieza ya no es solo un objeto reparado, sino una obra con alma propia." 
+                  data-en="<strong>Gold Scars:</strong> The golden lines are not mere ornaments; they represent the strength gained after adversity. The piece is no longer just a repaired object, but a work with its own soul.">
+                  <strong>Cicatrices de Oro:</strong> Las líneas doradas no son simples adornos; representan la fuerza adquirida tras la adversidad. La pieza ya no es solo un objeto reparado, sino una obra con alma propia.
+              </li>
+              <li class="lang-text" 
+                  data-es="<strong>Contraste Estético:</strong> El brillo del oro sobre las texturas mate u orgánicas de la cerámica simboliza que la reparación es una mejora evolutiva." 
+                  data-en="<strong>Aesthetic Contrast:</strong> The brilliance of gold over matte or organic ceramic textures symbolizes that repair is an evolutionary improvement.">
+                  <strong>Contraste Estético:</strong> El brillo del oro sobre las texturas mate u orgánicas de la cerámica simboliza que la reparación es una mejora evolutiva.
+              </li>
+              </ul>
+            <p class="analysis-footer lang-text"
+              data-es='"El mundo nos rompe a todos, y después, muchos son fuertes en los lugares rotos." — Ernest Hemingway.'
+              data-en='"The world breaks everyone and afterward many are strong at the broken places." — Ernest Hemingway.'>
+              "El mundo nos rompe a todos, y después, muchos son fuertes en los lugares rotos." — Ernest Hemingway.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer role="contentinfo">
+    <p>© 2026 Proyecto Kintsugi - Christian Pinto</p>
+  </footer>
+
+</body>
+</html>
